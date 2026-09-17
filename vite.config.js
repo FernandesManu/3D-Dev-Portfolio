@@ -3,6 +3,6 @@ import { defineConfig } from "vite";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  base: "/3D-Dev-Portfolio/",
+  base: process.env.GITHUB_ACTIONS ? "/3D-Dev-Portfolio/" : "/",
   plugins: [react(), tailwindcss()],
 });
